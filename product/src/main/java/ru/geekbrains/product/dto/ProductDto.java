@@ -1,13 +1,9 @@
 package ru.geekbrains.product.dto;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import ru.geekbrains.product.models.Product;
 
 @Data
-//@NoArgsConstructor
-//@RequiredArgsConstructor
 public class ProductDto {
     private Long id;
     private String title;
