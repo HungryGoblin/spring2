@@ -1,35 +1,41 @@
 package ru.geekbrains.product.models;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity
-@Table(name = "products")
 @Data
-@NoArgsConstructor
+@Entity
+@Table(name = "product")
 public class Product {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private long id;
 
-    @Column(name = "title")
-    private String title;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id", insertable = false, updatable = false)
+    private Brand brand;
 
-    @Column(name = "price")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id", insertable = false, updatable = false)
+    private ProductCategory productCategory;
+
+    @Column(name = "name", nullable = false)
+    private String name;
+
+    @Column(name = "price", nullable = false)
     private int price;
 
-    @Column(name = "created_at")
-    @CreationTimestamp
-    private LocalDateTime createdAt;
+    @Column(name = "description")
+    private String description;
 
-    @Column(name = "updated_at")
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
+    @OneToMany(
+            mappedBy = "id",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    private List<ProductReview> productReviews = new ArrayList<>();
+
 }

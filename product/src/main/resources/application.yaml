@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /products
+
+spring.jpa:
+  database: POSTGRESQL
+  show-sql: true
+
+
+spring.datasource:
+  platform: postgres
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/market
+  username: postgres
+  password: Aviks131

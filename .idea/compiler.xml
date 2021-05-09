@@ -3,21 +3,35 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="core" />
+        <module name="security" />
+        <module name="product" />
+        <module name="test" />
+        <module name="spring2" />
+        <module name="order" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="lesson2" target="11" />
-      <module name="lesson2product" target="11" />
-      <module name="storage" target="11" />
+      <module name="core" target="11" />
+      <module name="order" target="11" />
+      <module name="product" target="11" />
+      <module name="security" target="11" />
+      <module name="spring2" target="11" />
+      <module name="test" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="lesson1" options="-parameters" />
-      <module name="lesson2" options="-parameters" />
-      <module name="lesson2core" options="-parameters" />
-      <module name="lesson2order" options="-parameters" />
-      <module name="lesson2product" options="-parameters" />
-      <module name="storage" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="product" options="-parameters" />
+      <module name="security" options="-parameters" />
+      <module name="spring2" options="-parameters" />
+      <module name="test" options="-parameters" />
     </option>
   </component>
 </project>
