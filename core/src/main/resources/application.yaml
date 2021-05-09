@@ -1,0 +1,6 @@
+session:
+  store-type: redis
+  redis:
+    flush-mode: immediate
+
+

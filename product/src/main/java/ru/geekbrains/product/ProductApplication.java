@@ -2,8 +2,11 @@ package ru.geekbrains.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
+
+@SpringBootApplication ()
+@EnableJpaRepositories("ru.geekbrains")
 public class ProductApplication {
 
     public static void main(String[] args) {
@@ -11,3 +14,5 @@ public class ProductApplication {
     }
 
 }
+
+
