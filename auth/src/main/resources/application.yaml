@@ -13,3 +13,4 @@ spring.datasource:
   url: jdbc:postgresql://localhost:5432/market
   username: postgres
   password: Aviks131
+
